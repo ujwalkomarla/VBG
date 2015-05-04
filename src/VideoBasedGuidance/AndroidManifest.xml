@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fsaduk.vbg"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />   
+
+    
+      <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+   
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    
+    <permission android:name="com.fsaduk.vbg.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>   
+    <uses-permission android:name="com.fsaduk.vbg.permission.C2D_MESSAGE" />    
+    <!-- App receives GCM messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+  
+
+    <application
+		android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Translucent">
+		<!-- REQUIRED -->
+		<!-- android:allowBackup="true" -->
+
+
+        <activity
+            android:name=".Login"
+            android:label="VBG" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="Please register"  >
+        </activity>
+
+        <activity
+            android:name=".ReadComments"
+            android:label="Login"  >
+        </activity>   
+        
+        <activity
+            android:name=".GuideOrClient"
+            android:label="Select you want to be client or guide"  >
+        </activity>   
+        
+        
+        <activity
+            android:name=".GuidesList"
+            android:label="List of guides"  >
+        </activity> 
+ 
+         <activity
+            android:name="com.fsaduk.vbg.ClientStreaming"
+            android:label="Streaming" 
+            android:launchMode="singleInstance"
+             >
+        </activity>
+        
+        
+         <activity
+            android:name="com.vbg.guide.DrawingActivity"
+            android:label="Streaming" 
+            android:launchMode="singleInstance">
+        </activity>
+         
+        <receiver
+			android:name=".GCMbroadcastRecv"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+          <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            <category android:name="com.fsaduk.vbg" />
+          </intent-filter>
+        </receiver>      
+        <service android:name=".GCMmsgHandler" />
+ <service android:name="net.majorkernelpanic.streaming.rtsp.RtspServer" />
+		<meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>

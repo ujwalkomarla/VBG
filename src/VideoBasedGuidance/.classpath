@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/appcompat_v7"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/PrashantNarayan/Desktop/gcm.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/PrashantNarayan/Desktop/firebase-client-android-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/PrashantNarayan/Desktop/google-play-services_lib.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

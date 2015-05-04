@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#00AA0000"
+    android:orientation="horizontal" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/relLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00AA0000"
+    android:orientation="vertical" >
+        
+        
+        
+     <SurfaceView
+         android:id="@+id/playersurface"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="1.12" />
+
+     
+     
+     <LinearLayout 
+             android:id="@+id/testLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00AA0000"
+    android:orientation="horizontal"
+     android:layout_alignParentBottom="true"
+          >
+         
+
+
+     <EditText
+         android:id="@+id/TextToSend"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:inputType="text"
+         android:layout_weight="1"
+         android:ems="10" />
+     
+
+     <Button
+         android:id="@+id/SendText"
+         style="?android:attr/buttonStyleSmall"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+          
+         android:text="Send Text" />
+
+     </LinearLayout>
+
+     <Button
+         android:id="@+id/Clear"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:text="Clear Screen" />
+    
+     
+     
+</RelativeLayout>
+</LinearLayout>
+

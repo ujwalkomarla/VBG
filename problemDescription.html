@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Video Based Guidance</title>
+  <meta name="description" content="Video Based Guidance Android Project Description">
+  <meta name="keywords" content="VBG, Video Based Guidance, Guidance, Android Application, ECE575, CSC575, uskomarl, sreddy3, nkhanha, pkulkar4, fsaduk">
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>Video Based Guidance</h1>
+
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li  class="current"><a href="problemDescription.html">Problem Description</a></li>
+          <li><a href="practicalProblems.html">Practical Problems</a></li>
+          <li><a href="software.html">Project Setup</a></li>
+          <li><a href="finalreport.html">Report</a></li>
+          <li><a href="references.html">References</a></li>      
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+        <p> The aim of this project is to design a highly asymmetric
+		communication application that runs between two Android phones
+		connected through some kind of network. Call the two nodes <i>the
+		client</i> and<i> the guide</i>.</p>
+
+
+
+		<p> The <i>client</i> is lost and needs guidance of some sort (perhaps
+		navigation). It then connects to the guide (assumed at a known IP
+		address) for guidance. To this end it streams in real time the video
+		from its phone camera to the guide.</p>
+
+		<p> In turn, the <i>guide</i> is receiving this video and is able to
+		send signals to the client. Several types of signals are possible -
+		some are more important than others:</p>
+		<ul>
+		  <li> a sign/gesture superimposed on the video and with short
+		  persistence (2-5 seconds) is required as it can be useful in a
+		  variety of situations.</li>
+		  <li> a text is less convenient, but still a valid option
+		  sometimes. This feedback is also required.</li>
+		  <li> for extra credit, also send voice on the return channel.</li>
+		</ul>
+
+		<p>For extra credit have the video quality adapt to the quality of the
+		network between the client and the guide.</p>
+
+
+		<p>To successfully complete this project you need to have:</p>
+		<ul>
+		<li> Good knowledge of Java;</li>
+		</ul>
+
+		<h3> Deliverables </h3>
+
+		<ul>
+		<li> Demonstration</li>
+		<li> Well commented code </li>
+		<li> Report</li>
+		</ul>  
+      </div>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; simplestyle_7 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Website templates</a></p>
+    </div>
+  </div>
+</body>
+</html>

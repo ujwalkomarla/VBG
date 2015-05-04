@@ -1,0 +1,5 @@
+Learn PHP: http://www.w3schools.com/php
+GCM push server side code: https://github.com/mattg888/GCM-PHP-Server-Push-Message
+Link to learn SQL commands: http://www.sqlteaching.com/
+Tutorial to communicate between android and PHP server: http://www.mybringback.com/android-sdk/12924/android-tutorial-using-remote-databases-php-and-mysql-part-1/
+

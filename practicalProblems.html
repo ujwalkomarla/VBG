@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Video Based Guidance</title>
+  <meta name="description" content="Video Based Guidance Android Application Project Website">
+  <meta name="keywords" content="VBG, Video Based Guidance, Guidance, Android Application, ECE575, CSC575, uskomarl, sreddy3, nkhanha, pkulkar4, fsaduk">
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>Video Based Guidance</h1>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problemDescription.html">Problem Description</a></li>
+          <li class="current"><a href="practicalProblems.html">Practical Problems</a></li>
+          <li><a href="software.html">Project Setup</a></li>
+          <li><a href="finalreport.html">Report</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+  <p>There are a range of problems which we faced during the development of 'Video based guidance' application, some of the major problems are discussed below. Most of them are fixed and some still persist.</p>
+
+<p><strong>IP mobility</strong>: Here in we were having trouble locating any android device that has switched to different IP in subnet, since android device uses one IP address at the time of registration/login  this information is stored in our database. As soon as the IP mobility occurs there can be loss of peer to peer connection and thus loss of video streaming. To handle such a scenario, we have made use of service called "Google Cloud Messaging". This service helps to keep track of android device running "GCM" application. "GCM" applications are registered on Google server using a unique ID which is used to identify devices running the app. Using this unique ID, GCM server keeps track of device even when IP address changes within the subnet.
+</p>
+
+<p><strong>Network-Port Address translations problem</strong>: This is one of the problem that still persists in our app. Generally app has to support any underlying medium of data to communicate with outside world i.e GPRS or WiFi. To handle such a scenario we should make sure that android device using different IP address are able to communicate. Because of multiple address translations it was difficult to support such a feature. We tried to implement "hole punching" but were unsuccessful. "Hole punching as explained in Wikipedia is a technique for establishing a direct connection between two parties who are both behind restrictive firewalls. Each client connects to an unrestricted third-party server that temporarily stores external and internal address information from them. The server relays one client's information to the other and vice versa, and both clients try to establish a connection between each other. Having valid port numbers causes the firewalls to accept the incoming packets from each side. Hole punching does not require any knowledge of the network topology".
+</p>
+<p><strong>Camera Orientation issues</strong>: This is another problem that still persists in our app. This issue is faced due to difference in default orientation of camera in recording mode on different smartphones Because of this behavior, the client side records the video in landscape view and it is streamed to guide and played in server in portrait view.
+</p>
+<p><strong>Clearing Image canvas on Firebase</strong>: One other issue faced during the development of this app is clearing canvas on the guide did not resulting in corresponding canvas on client app to be cleared. We were facing this issue because database synced between client and guide was not getting cleared. As a solution to this problem we are updating URL and pointing guide and server to new canvas to draw on.
+</p>
+<p><strong>Calling the UI activity from the background</strong>: In our project, there were some cases where an UI component needs to be changed based on the background events. For example: when a guide gets a connectTo message in the background, then the activity needs to be changed from the background method itself. This was causing the application to crash because in android the background tasks cannot change the UI activity.
+<br/>
+Solution: To overcome this problem, we created an additional thread to handle the UI components from the background events. This was an AsyncTask which is executed from the background and runs in parallel to the background activity.
+</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; simplestyle_7 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Website templates</a></p>
+    </div>
+  </div>
+</body>
+</html>

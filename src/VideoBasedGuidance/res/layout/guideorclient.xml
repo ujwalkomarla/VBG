@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF" >
+
+    
+<RadioGroup 
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <RadioButton
+        android:id="@+id/Client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.23"
+        android:background="#FFFFFFFF"
+        android:text="Client"
+        android:textColor="#FF000000" />
+
+    <RadioButton
+        android:id="@+id/Guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.40"
+        android:background="#FFFFFFFF"
+        android:text="Guide"
+        android:textColor="#FF000000" />
+    
+    </RadioGroup>
+
+</LinearLayout>
